@@ -1,0 +1,4 @@
+scikit-learn~=1.0.2
+pyod~=0.9.7
+matplotlib~=3.4.2
+imblearn~=0.0
