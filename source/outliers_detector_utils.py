@@ -111,9 +111,9 @@ def train_model_Cardiotocography(X, y):
     X_train, y_train = sm.fit_resample(X_train, y_train)
 
     # We will apply Standard Scaling to our data
-    scaler = StandardScaler()
-    standardized_X_train = pd.DataFrame(scaler.fit_transform(X_train), columns=X_train.columns)
-    standardized_X_test = pd.DataFrame(scaler.transform(X_test), columns=X_test.columns)
+    scalar = StandardScaler()
+    standardized_X_train = pd.DataFrame(scalar.fit_transform(X_train), columns=X_train.columns)
+    standardized_X_test = pd.DataFrame(scalar.transform(X_test), columns=X_test.columns)
 
     clf_gini = DecisionTreeClassifier(criterion='gini', max_depth=6, random_state=42)
     clf_gini.fit(standardized_X_train, y_train)
